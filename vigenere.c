@@ -18,7 +18,7 @@ int main(int argc, string argv[])
     else if (isword(strlen(argv[1]), argv[1]) == 0)
     {
         printf("Usage: ./vigenere keyword\n");
-        return 2;
+        return 1;
     }
     int l = strlen(argv[1]) ;
     string keyword = argv[1] ;
@@ -28,15 +28,17 @@ int main(int argc, string argv[])
     scanf("%[^\n]s", plain_text);
     printf("ciphertext: ");
     // Printing cipher text
-    for (int i = 0, n = strlen(plain_text) ; i < n ; i++)
+    for (int i = 0, count = 0, n = strlen(plain_text) ; i < n ; i++)
     {
         if (islower(plain_text[i]))
         {
-            printf("%c", (char)('a' + (plain_text[i] - 'a' + shift(keyword[i % l])) % 26)) ;
+            count++;
+            printf("%c", (char)('a' + (plain_text[i] - 'a' + shift(keyword[count % l])) % 26)) ;
         }
         else if (isupper(plain_text[i]))
         {
-            printf("%c", (char)('A' + (plain_text[i] - 'A' + shift(keyword[i % l])) % 26));
+            count++;
+            printf("%c", (char)('A' + (plain_text[i] - 'A' + shift(keyword[count % l])) % 26));
         }
         else
         {
