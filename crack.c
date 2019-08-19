@@ -13,7 +13,7 @@ int main(int argc, string argv[])
     }
     // Getting hash and salt
     string hash = argv[1];
-    char leters[53] ="\0abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" ;
+    char leters[53] = "\0abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" ;
     char salt[3];
     salt[0] = hash[0];
     salt[1] = hash[1];
