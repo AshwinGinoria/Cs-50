@@ -32,13 +32,13 @@ int main(int argc, string argv[])
     {
         if (islower(plain_text[i]))
         {
-            count++;
             printf("%c", (char)('a' + (plain_text[i] - 'a' + shift(keyword[count % l])) % 26)) ;
+            count++;
         }
         else if (isupper(plain_text[i]))
         {
-            count++;
             printf("%c", (char)('A' + (plain_text[i] - 'A' + shift(keyword[count % l])) % 26));
+            count++;
         }
         else
         {
