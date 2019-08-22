@@ -80,7 +80,7 @@ int main(int argc, char *argv[])
     // Storing Scan line length
     int slength = bi.biWidth * sizeof(RGBTRIPLE) + padding ;
 
-    if (factor > 1)
+    if (factor >= 1)
     {
         // iterate over infile's scanlines
         for (int i = 0, biHeight = abs(bi.biHeight); i < biHeight; i++)
