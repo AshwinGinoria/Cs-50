@@ -124,7 +124,7 @@ int main(int argc, char *argv[])
         // iterate over infile's scanlines
         for (int i = 0, biHeight = abs(bi.biHeight); i < biHeight; i++)
         {
-            if (i % 2 != 0)
+            if (i % decrease == 0)
             {
                 fseek(inptr, slength, SEEK_CUR);
                 continue;
@@ -132,7 +132,7 @@ int main(int argc, char *argv[])
             // iterate over pixels in scanline
             for (int j = 0; j < bi.biWidth; j++)
             {
-                if (j % 2 != 0)
+                if (j % decrease == 0)
                 {
                     fseek(inptr, sizeof(RGBTRIPLE), SEEK_CUR);
                     continue;
