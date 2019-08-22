@@ -37,11 +37,11 @@ int main(int argc, char *argv[])
     }
 
     // read infile's BITMAPFILEHEADER
-    BITMAPFILEHEADER bf,bfn;
+    BITMAPFILEHEADER bf, bfn;
     fread(&bf, sizeof(BITMAPFILEHEADER), 1, inptr);
 
     // read infile's BITMAPINFOHEADER
-    BITMAPINFOHEADER bi,bin;
+    BITMAPINFOHEADER bi, bin;
     fread(&bi, sizeof(BITMAPINFOHEADER), 1, inptr);
 
     // ensure infile is (likely) a 24-bit uncompressed BMP 4.0
@@ -120,7 +120,7 @@ int main(int argc, char *argv[])
     }
     else
     {
-        int decrease = (int)(1/factor);
+        int decrease = (int)(1 / factor);
         // iterate over infile's scanlines
         for (int i = 0, biHeight = abs(bi.biHeight); i < biHeight; i++)
         {
