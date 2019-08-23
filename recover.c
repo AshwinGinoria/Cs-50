@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
             }
 
             // Opening new Output file.
-            sprintf(filename, "Image%03d.jpg", count);
+            sprintf(filename, "%03d.jpg", count);
             outptr = fopen(filename, "w");
 
             // Incrementing count and setting flag == true
