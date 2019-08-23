@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 
     const int block_size = 512;
     char filename[sizeof "Image100.jpg"];
-    int count = 1, num;
+    int count = 0, num;
     char Buffer[block_size];
     int flag = 0;
     char byte1, byte2, byte3;
