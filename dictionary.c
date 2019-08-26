@@ -134,7 +134,7 @@ bool unload(void)
         {
             ptr = hashtable[i];
             hashtable[i] = hashtable[i]->next;
-            free(hashtable[i]);
+            free(ptr);
         }
         free(hashtable[i]);
     }
