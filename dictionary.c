@@ -87,10 +87,10 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     int count = 0;
-    for (int i=0; i < N; i++)
+    for (int i = 0; i < N; i++)
     {
         node *ptr = hashtable[i];
-        while(ptr != NULL)
+        while (ptr != NULL)
         {
             count++;
             ptr = ptr->next;
@@ -110,9 +110,9 @@ bool check(const char *word)
 
     // Travesing that bucket in search of the word
     ptr = hashtable[hash_index];
-    while(ptr != NULL)
+    while (ptr != NULL)
     {
-        if (strcasecmp(ptr->word,word) == 0)
+        if (strcasecmp(ptr->word, word) == 0)
         {
             return 1;
         }
@@ -130,7 +130,7 @@ bool unload(void)
     {
         node *ptr;
 
-        while(hashtable[i] != NULL)
+        while (hashtable[i] != NULL)
         {
             ptr = hashtable[i];
             hashtable[i] = hashtable[i]->next;
